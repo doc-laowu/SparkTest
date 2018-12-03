@@ -32,6 +32,7 @@ object KafkaRdd {
       OffsetRange("test", 1, 0, 100)
     )
 
+    //这是实验中的Api现在还没有正式的加入
 //    val rdd = KafkaUtils.createRDD[String, String](
 //      sc,
 //      kafkaParams,

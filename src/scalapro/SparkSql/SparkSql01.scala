@@ -17,15 +17,19 @@ object SparkSql01 {
     df.printSchema()
 
     //显示所有的行
-    df.show()
+//    df.show()
 
     //值过滤
-    df.filter($"age" > 10).show()
+//    df.filter($"age" > 10).show()
 
     //创建一个本地的临时视图
     df.createOrReplaceTempView("people")
 
-    spark.sql(" select * from people where age > 10").show()
+    df.show()
+
+//    spark.sql(" select * from people where age > 10").map(x=>{
+//      x.getLong(0).+(10)
+//    })
 
     spark.stop()
   }
